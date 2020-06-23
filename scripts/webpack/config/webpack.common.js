@@ -17,7 +17,14 @@ module.exports = () => {
           //TODO: Прокачать загрузку стилей
           test: /\.css$/,
           use: ['style-loader', 'css-loader']
-        }
+        },
+        {
+          test: /\.js$/,
+          use: {
+            loader: 'babel-loader',
+            options: {}
+          }
+        },
       ]
     },
     plugins: [
