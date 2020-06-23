@@ -97,7 +97,8 @@ module.exports = __webpack_require__(1);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _simple_components_javascript__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _react_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _react_component__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_react_component__WEBPACK_IMPORTED_MODULE_0__);
 // import component from './simple-components/dom'
 // import './theme/main.css'
 //
@@ -112,68 +113,14 @@ __webpack_require__.r(__webpack_exports__);
 //     }
 //   )
 // }
+// import './simple-components/javascript'
 
 
 /***/ }),
 /* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return a; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return b; });
-function _newArrowCheck(innerThis, boundThis) { if (innerThis !== boundThis) { throw new TypeError("Cannot instantiate an arrow function"); } }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-console.clear();
-
-var Human = /*#__PURE__*/function () {
-  function Human(name, age) {
-    var _this = this;
-
-    _classCallCheck(this, Human);
-
-    _defineProperty(this, "kind", 'homo sapiens');
-
-    _defineProperty(this, "sayKind", function () {
-      _newArrowCheck(this, _this);
-
-      console.log('Kind: ', this.kind);
-    }.bind(this));
-
-    this.name = name;
-    this.age = age;
-  }
-
-  _createClass(Human, [{
-    key: "sayName",
-    value: function sayName() {
-      console.log('Name: ', this.name);
-    }
-  }, {
-    key: "sayAge",
-    value: function sayAge() {
-      console.log('Age: ', this.age);
-    }
-  }]);
-
-  return Human;
-}();
-
-var gendalf = new Human('Gendalf', 666);
-gendalf.sayName();
-gendalf.sayAge();
-var a = 1;
-var b = 5;
-var c = a + b;
-console.log(c);
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\leona\\Progects\\JS\\Node\\lectrum--webpack\\src\\react-component\\index.js: Unexpected token (26:8)\n\n\u001b[0m \u001b[90m 24 | \u001b[39m      \u001b[36mconst\u001b[39m { count } \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mstate\u001b[0m\n\u001b[0m \u001b[90m 25 | \u001b[39m      \u001b[36mreturn\u001b[39m (\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 | \u001b[39m        \u001b[33m<\u001b[39m\u001b[33msection\u001b[39m className\u001b[33m=\u001b[39m{\u001b[33mStyles\u001b[39m\u001b[33m.\u001b[39mclicker}\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 27 | \u001b[39m          \u001b[33m<\u001b[39m\u001b[33mh1\u001b[39m\u001b[33m>\u001b[39m\u001b[33mCount\u001b[39m\u001b[33m:\u001b[39m {count}\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mh1\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 | \u001b[39m          \u001b[33m<\u001b[39m\u001b[33mbutton\u001b[39m onClick\u001b[33m=\u001b[39m{\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39minc}\u001b[33m>\u001b[39m\u001b[33mIncrement\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mbutton\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 29 | \u001b[39m          \u001b[33m<\u001b[39m\u001b[33mbutton\u001b[39m onClick\u001b[33m=\u001b[39m{\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdec}\u001b[33m>\u001b[39m\u001b[33mDecrement\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mbutton\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n    at Parser._raise (C:\\Users\\leona\\Progects\\JS\\Node\\lectrum--webpack\\node_modules\\@babel\\parser\\lib\\index.js:754:17)\n    at Parser.raiseWithData (C:\\Users\\leona\\Progects\\JS\\Node\\lectrum--webpack\\node_modules\\@babel\\parser\\lib\\index.js:747:17)\n    at Parser.raise (C:\\Users\\leona\\Progects\\JS\\Node\\lectrum--webpack\\node_modules\\@babel\\parser\\lib\\index.js:741:17)\n    at Parser.unexpected (C:\\Users\\leona\\Progects\\JS\\Node\\lectrum--webpack\\node_modules\\@babel\\parser\\lib\\index.js:8844:16)\n    at Parser.parseExprAtom (C:\\Users\\leona\\Progects\\JS\\Node\\lectrum--webpack\\node_modules\\@babel\\parser\\lib\\index.js:10167:20)\n    at Parser.parseExprSubscripts (C:\\Users\\leona\\Progects\\JS\\Node\\lectrum--webpack\\node_modules\\@babel\\parser\\lib\\index.js:9693:23)\n    at Parser.parseMaybeUnary (C:\\Users\\leona\\Progects\\JS\\Node\\lectrum--webpack\\node_modules\\@babel\\parser\\lib\\index.js:9673:21)\n    at Parser.parseExprOps (C:\\Users\\leona\\Progects\\JS\\Node\\lectrum--webpack\\node_modules\\@babel\\parser\\lib\\index.js:9543:23)\n    at Parser.parseMaybeConditional (C:\\Users\\leona\\Progects\\JS\\Node\\lectrum--webpack\\node_modules\\@babel\\parser\\lib\\index.js:9516:23)\n    at Parser.parseMaybeAssign (C:\\Users\\leona\\Progects\\JS\\Node\\lectrum--webpack\\node_modules\\@babel\\parser\\lib\\index.js:9471:21)");
 
 /***/ })
 /******/ ]);
