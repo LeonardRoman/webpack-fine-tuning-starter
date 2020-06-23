@@ -22,8 +22,8 @@ const chalk = require('chalk')
 const { choosePort } = require('./utils')
 
 // Config
-const getConfig = require('./webpack.config')
-const compiler = webpack(getConfig())
+const getDevConfig = require('./config/webpack.dev')
+const compiler = webpack(getDevConfig())
 
 // Constant
 const { HOST, PORT } = require('./constants');

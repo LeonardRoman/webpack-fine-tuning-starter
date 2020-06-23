@@ -3,8 +3,8 @@ const webpack = require('webpack')
 const chalk = require('chalk')
 
 //config
-const getConfig = require('./webpack.config')
-const compiler = webpack(getConfig())
+const getProdConfig = require('./config/webpack.prod')
+const compiler = webpack(getProdConfig())
 
 compiler.run((err, stats) => {
   if (err) {
