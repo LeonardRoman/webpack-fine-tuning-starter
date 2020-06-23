@@ -4,11 +4,12 @@ module.exports = (api) => {
     api.cache.using(()=> env === 'development')
    */
   api.cache.never() // dev (react-hot-loader) или prod ()
+
   return {
     presets: [
-      ['@babel/preset-env',
+      ['@babel/preset-react',
         {
-          debug: true, // выводит в консоль инфу по настройке
+          debug: false, // выводит в консоль инфу по настройке
           spec: true, // specification, делаем код более медленным, но более надежным
           loose: false, // делаем код более быстрым, но отходит от стандарта
           modules: false // webpack хорошо рабоатает только с ES2015 модулями
