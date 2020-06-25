@@ -20,6 +20,7 @@
     "@babel/preset-env": "^7.10.3",
     "@babel/preset-react": "^7.10.1",
     "@babel/register": "^7.10.3",
+    "@svgr/webpack": "^5.4.0",
     "app-root-path": "^3.0.0",
     "babel-loader": "^8.1.0",
     "chalk": "^4.1.0",
