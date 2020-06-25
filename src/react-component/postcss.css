@@ -1,22 +1,28 @@
 .clicker {
-  --mainColor: wheat;
-  --headFontSize: 56px;
   color: var(--mainColor);
+
+  & img {
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 25px;
+  }
 
   & h1 {
     font-size: var(--headFontSize);
   }
 
-  & button {
-    height: 30px;
-    width: 150px;
-    border: 1px solid black;
-    border-radius: 7px;
-    background-color: var(--mainColor);
-    font-size: 20px;
-    cursor: pointer;
-    outline: 0;
-  }
+  /*  & button {
+      height: 30px;
+      width: 150px;
+      border: 1px solid black;
+      border-radius: 7px;
+      background-color: var(--mainColor);
+      font-size: 20px;
+      cursor: pointer;
+      outline: 0;
+    }*/
 
   /* Передача кастомных переменных из babel: @media (--phonePortrait) {  color: red; }*/
 

@@ -15,6 +15,13 @@ module.exports = () => {
     module: {
       rules: [
         {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader'
+          }
+        },
+        {
           //TODO: Прокачать загрузку стилей
           test: /\.css$/,
           use: [
@@ -57,11 +64,15 @@ module.exports = () => {
           ]
         },
         {
-          test: /\.js$/,
-          exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader'
-          }
+          test: /\.(png|jpe?g|gif|svg)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: `./images/[name]--[hash:base64:5].[ext]`
+              }
+            },
+          ],
         },
       ]
     },

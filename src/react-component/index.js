@@ -4,6 +4,8 @@ import { render } from 'react-dom'
 import { hot } from 'react-hot-loader'
 
 import Styles from './postcss.css'
+import kitty from '../theme/images/kitty.jpg'
+import { Button } from '../Button'
 
 const Clicker = hot(module)(
   class extends Component {
@@ -24,9 +26,11 @@ const Clicker = hot(module)(
       const { count } = this.state
       return (
         <section className={Styles.clicker}>
+          <img src={kitty}
+               alt="kitty" />
           <h1>Счетчик: {count}</h1>
-          <button onClick={this.inc}>Increment</button>
-          <button onClick={this.dec}>Decrement</button>
+          <Button onClick={this.inc}>Increment</Button>
+          <Button onClick={this.dec}>Decrement</Button>
         </section>
       )
     }
