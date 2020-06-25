@@ -5,7 +5,7 @@ import merge from 'webpack-merge'
 // Config
 import getCommonConfig from './webpack.common'
 
-module.exports = () => {
+export default  () => {
   return merge(getCommonConfig(), {
     mode: 'none',
     devtool: 'cheap-module-eval-source-map',
