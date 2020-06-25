@@ -1,9 +1,17 @@
 module.exports = (api) => {
-  /* TODO: Посмотерть новый способ кэширования в dev
-    const env = api.env()
-    api.cache.using(()=> env === 'development')
-   */
-  api.cache.never() // dev (react-hot-loader) или prod ()
+  const env = api.env()
+  const plugins = ['@babel/plugin-proposal-class-properties']
+
+  api.cache.never()
+  // api.cache.using(() => env !== 'development')
+
+  if (env === 'development') {
+    /*
+    * Этот плагин не обязательный для хот-релодинга React-компонентов
+    * Но без этого плагина хот-релодинг может двать сбой
+    * */
+    plugins.push('react-hot-loader/babel')
+  }
 
   return {
     presets: [
@@ -16,6 +24,6 @@ module.exports = (api) => {
         }
       ]
     ],
-    plugins: ['@babel/plugin-proposal-class-properties']
+    plugins
   }
 }

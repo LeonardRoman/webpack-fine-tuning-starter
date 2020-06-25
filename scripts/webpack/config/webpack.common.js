@@ -1,9 +1,9 @@
 // Core
-const HTMLWebpackPlugin = require('html-webpack-plugin')
-const postCssPreset = require('postcss-preset-env')
+import HTMLWebpackPlugin from 'html-webpack-plugin'
+import postCssPreset from 'postcss-preset-env'
 
 // Constants
-const { BUILD_DIRECTORY, PUBLIC_DIRECTORY, SOURCE_DIRECTORY } = require('../constants')
+import { BUILD_DIRECTORY, PUBLIC_DIRECTORY, SOURCE_DIRECTORY } from '../constants'
 
 module.exports = () => {
   return {
@@ -31,24 +31,25 @@ module.exports = () => {
                   // цепочка плагинов postcss
                   postCssPreset({
                     stage: 0, //default: stage 2
-                    features: {
-                      'custom-media-queries': {
-                        importFrom: [
-                          {
-                            customMedia: {
-                              '--phonePortrait': '(width <= 414px)',
-                              '--phoneLandscape': '(width >= 415px) and (width <= 667px)',
-                              '--tabletPortrait': '(width >= 668px) and (width <= 768px)',
-                              '--tabletLandscape': '(width >= 769px) and (width <= 1024px)',
-                              '--desktopS': '(width >= 1025px) and (width <= 1366px)',
-                              '--desktopM': '(width >= 1367px) and (width <= 1680px)',
-                              '--desktopL': '(width >= 1681px) and (width <= 1920px)',
-                              '--desktopXL': '(width >= 1921px)'
-                            }
-                          }
-                        ]
-                      }
-                    }
+                    // Пример использования кастомных настроек postcss
+                    // features: {
+                    //   'custom-media-queries': {
+                    //     importFrom: [
+                    //       {
+                    //         customMedia: {
+                    //           '--phonePortrait': '(width <= 414px)',
+                    //           '--phoneLandscape': '(width >= 415px) and (width <= 667px)',
+                    //           '--tabletPortrait': '(width >= 668px) and (width <= 768px)',
+                    //           '--tabletLandscape': '(width >= 769px) and (width <= 1024px)',
+                    //           '--desktopS': '(width >= 1025px) and (width <= 1366px)',
+                    //           '--desktopM': '(width >= 1367px) and (width <= 1680px)',
+                    //           '--desktopL': '(width >= 1681px) and (width <= 1920px)',
+                    //           '--desktopXL': '(width >= 1921px)'
+                    //         }
+                    //       }
+                    //     ]
+                    //   }
+                    // }
                   })
                 ]
               }
@@ -57,6 +58,7 @@ module.exports = () => {
         },
         {
           test: /\.js$/,
+          exclude: /node_modules/,
           use: {
             loader: 'babel-loader'
           }

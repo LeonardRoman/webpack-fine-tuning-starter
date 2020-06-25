@@ -13,20 +13,22 @@
  * 3. Настроить на исходном коде
  ***/
 // Core
-const webpack = require('webpack')
-const DevServer = require('webpack-dev-server')
-const hot = require('webpack-hot-middleware')
-const chalk = require('chalk')
+import webpack from 'webpack'
+import DevServer from 'webpack-dev-server'
+import hot from 'webpack-hot-middleware'
+import chalk from 'chalk'
+// const openBrowser = require('react-dev-utils/openBrowser')
 
 // Utils
-const { choosePort } = require('./utils')
+import { choosePort } from './utils'
 
 // Config
-const getDevConfig = require('./config/webpack.dev')
+import getDevConfig from './config/webpack.dev'
+
 const compiler = webpack(getDevConfig())
 
 // Constant
-const { HOST, PORT } = require('./constants');
+import { HOST, PORT } from './constants'
 
 (async () => {
   try {
@@ -58,6 +60,7 @@ const { HOST, PORT } = require('./constants');
       HOST,
       () => {
         console.log(`${chalk.greenBright('Server listening on')} ${chalk.blueBright(`http://${HOST}:${selectedPort}`)}`)
+        // openBrowser(`http://${HOST}:${selectedPort}`)
       })
 
   } catch (e) {

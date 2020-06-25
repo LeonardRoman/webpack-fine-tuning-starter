@@ -1,11 +1,11 @@
 // Core
-const { resolve } = require('path')
-const { path: PROJECT_ROOT } = require('app-root-path')
+import { resolve } from 'path'
+import { path } from 'app-root-path'
 
 // the path(s) that should be cleaned
-exports.PROJECT_ROOT = PROJECT_ROOT
-exports.BUILD_DIRECTORY = resolve(PROJECT_ROOT, './build')
-exports.SOURCE_DIRECTORY = resolve(PROJECT_ROOT, './src')
-exports.PUBLIC_DIRECTORY = resolve(PROJECT_ROOT, './static')
+exports.PROJECT_ROOT = path
+exports.BUILD_DIRECTORY = resolve(path, './build')
+exports.SOURCE_DIRECTORY = resolve(path, './src')
+exports.PUBLIC_DIRECTORY = resolve(path, './static')
 exports.HOST = 'localhost'
 exports.PORT = 3000
