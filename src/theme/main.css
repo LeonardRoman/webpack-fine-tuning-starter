@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: Caveat, cursive, 'Roboto Condensed', serif;
+  font-family: Caveat, cursive, system-ui;
   min-height: 100vh;
   background-size: 100%;
   background-color: #161619;
