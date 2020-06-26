@@ -63,3 +63,21 @@ export const loadSVG = () => ({
     ]
   }
 })
+
+export const loadFonts = () => ({
+  module: {
+    rules: [
+      {
+        test: /\.(woff2)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: `./fonts/[name].[ext]`
+            }
+          },
+        ],
+      },
+    ]
+  }
+})

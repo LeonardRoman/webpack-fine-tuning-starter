@@ -19,6 +19,7 @@ export default () => {
     modules.loadStyles(),
     modules.loadImages(),
     modules.loadSVG(),
+    modules.loadFonts(),
     modules.setupHtml()
   )
 }
