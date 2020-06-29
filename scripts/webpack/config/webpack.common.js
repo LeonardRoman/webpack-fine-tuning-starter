@@ -12,7 +12,8 @@ export default () => {
       entry: [SOURCE_DIRECTORY],
       output: {
         path: BUILD_DIRECTORY,
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: '/'
       },
     },
     modules.loadJavaScript(),
