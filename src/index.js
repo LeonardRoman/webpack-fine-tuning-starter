@@ -14,4 +14,19 @@ import './theme/main.css'
 // }
 
 // import './simple-components/javascript'
-import './react-component'
+// import './react-component'
+
+/*** ENV Variables ***
+ *
+ * 1. API (ссылка к API в деве и проде)
+ * 2. Условия
+ * 3. Фичи в разработке (flags)
+ * */
+
+// console.log('Environment:', __ENV__)
+// console.log('Development?:', __DEV__)
+// console.log('Production?:', __PROD__)
+// if (process.env.NODE_ENV === 'development') console.log('Dev')
+// else console.log('Prod')
+//
+// if (RELEASE === '2.1') console.log('код фичи')
