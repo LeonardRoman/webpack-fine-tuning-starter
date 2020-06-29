@@ -17,5 +17,6 @@ export default () => {
       ]
     },
     modules.loadProdCss(),
+    modules.optimizeImages()
   )
 }
