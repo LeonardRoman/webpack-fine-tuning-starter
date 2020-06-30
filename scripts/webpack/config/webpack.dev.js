@@ -1,6 +1,7 @@
 // Core
 import { HotModuleReplacementPlugin } from 'webpack'
 import merge from 'webpack-merge'
+import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin'
 
 // Config
 import getCommonConfig from './webpack.common'
@@ -14,7 +15,8 @@ export default () => {
       devtool: 'cheap-module-eval-source-map',
       entry: ['webpack-hot-middleware/client?reload=true&quiet=true'],
       plugins: [
-        new HotModuleReplacementPlugin()
+        new HotModuleReplacementPlugin(),
+        new FriendlyErrorsWebpackPlugin()
       ]
     },
     modules.loadDevCss(),

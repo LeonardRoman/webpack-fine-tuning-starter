@@ -1,5 +1,6 @@
 // Core
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
+import WebpackBar from 'webpackbar'
 import merge from 'webpack-merge'
 
 // Config
@@ -14,6 +15,7 @@ export default () => {
       devtool: false,
       plugins: [
         new CleanWebpackPlugin({ verbose: true }),
+        new WebpackBar()
       ]
     },
     modules.loadProdCss(),
