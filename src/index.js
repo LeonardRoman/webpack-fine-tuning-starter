@@ -13,7 +13,7 @@ import './theme/main.css'
 //   )
 // }
 
-// import './simple-components/javascript'
+import './simple-components/javascript'
 // import './react-component'
 
 /*** ENV Variables ***

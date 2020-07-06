@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "start": "cross-env NODE_ENV=development node -r @babel/register \"./scripts/webpack/start.js\"",
+    "analyze": "webpack-bundle-analyzer \"./build/stats.json\"",
     "build": "cross-env NODE_ENV=production node -r @babel/register \"./scripts/webpack/build.js\"",
     "serve": "serve \"./build\" -s"
   },
@@ -44,7 +45,10 @@
     "react-hot-loader": "^4.12.21",
     "serve": "^11.3.2",
     "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^3.0.6",
     "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-dashboard": "^3.2.0",
     "webpack-dev-server": "^3.11.0",
     "webpack-hot-middleware": "^2.25.0",
     "webpack-merge": "^4.2.2",

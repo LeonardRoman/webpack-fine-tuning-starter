@@ -1,8 +1,9 @@
 import chalk from 'chalk'
 import detectPort from 'detect-port-alt'
 import inquirer from 'inquirer'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
-exports.choosePort = async (defaultPort) => {
+export const choosePort = async (defaultPort) => {
   try {
     const port = await detectPort(defaultPort)
     if (port === defaultPort) return defaultPort
@@ -32,3 +33,15 @@ exports.choosePort = async (defaultPort) => {
   return null
 
 }
+
+export const connectBundleAnalyzer = () => ({
+
+  plugins: [
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'disabled',
+      openAnalyzer: false,
+      generateStatsFile: true
+    })
+  ]
+
+})

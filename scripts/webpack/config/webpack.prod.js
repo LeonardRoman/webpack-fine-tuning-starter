@@ -11,7 +11,7 @@ import * as modules from '../modules'
 
 export default () => {
   return merge(getCommonConfig(), {
-      mode: 'none',
+      mode: 'production', // перезаписывает NODE_ENV
       devtool: false,
       plugins: [
         new CleanWebpackPlugin({ verbose: true }),
@@ -19,6 +19,8 @@ export default () => {
       ]
     },
     modules.loadProdCss(),
-    modules.optimizeImages()
+    modules.optimizeImages(),
+    modules.optimizeBuild(),
+    modules.connectBundleAnalyzer()
   )
 }
