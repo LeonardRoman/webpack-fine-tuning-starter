@@ -21,6 +21,7 @@ export default () => {
     modules.loadProdCss(),
     modules.optimizeImages(),
     modules.optimizeBuild(),
-    modules.connectBundleAnalyzer()
+    modules.connectBundleAnalyzer(),
+    modules.filterMomentLocales()
   )
 }

@@ -4,6 +4,7 @@ import mozjpeg from 'imagemin-mozjpeg'
 import pngquant from 'imagemin-pngquant'
 import svgo from 'imagemin-svgo'
 import TerserPlugin from 'terser-webpack-plugin'
+import { ContextReplacementPlugin } from 'webpack'
 
 /*
 * production: оптимизация включена только в mode production
@@ -15,7 +16,7 @@ export const optimizeBuild = () => ({
     nodeEnv: 'production',
 
     // production: минификация JavaScript
-    minimize: false,
+    minimize: true,
     minimizer: [new TerserPlugin()],
 
     // production: останавливает эмит сборки при возникновении ошибки во время компиляции
@@ -91,5 +92,11 @@ export const optimizeImages = () => ({
         ],
       },
     }),
+  ],
+})
+
+export const filterMomentLocales = () => ({
+  plugins: [
+    new ContextReplacementPlugin(/moment[/\\]locale$/, /en-gb|ru/)
   ],
 })
