@@ -65,6 +65,8 @@ export const optimizeBuild = () => ({
     // Опеределяет механизм генерирования индефикатора для чанка
     chunkIds: false,
 
+    // Initial chunk (vendors - react, vue
+    // Async chunk (on demond)
   }
 })
 

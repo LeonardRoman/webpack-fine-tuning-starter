@@ -10,11 +10,11 @@ import * as modules from '../modules'
 
 export default () => {
   const { NODE_ENV } = process.env
+
   return merge({
       entry: [SOURCE_DIRECTORY],
       output: {
         path: BUILD_DIRECTORY,
-        filename: 'bundle.js',
         publicPath: '/'
       },
       plugins: [

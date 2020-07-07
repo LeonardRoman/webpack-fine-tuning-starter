@@ -12,6 +12,10 @@ import * as modules from '../modules'
 export default () => {
   return merge(getCommonConfig(), {
       mode: 'production', // перезаписывает NODE_ENV
+      output: {
+        filename: 'js/[name].[contenthash:5].[id].js',
+        chunkFilename: 'js/[name].[chunkhash:5].[id].js',
+      },
       devtool: false,
       plugins: [
         new CleanWebpackPlugin({ verbose: true }),
