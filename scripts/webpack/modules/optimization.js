@@ -115,7 +115,9 @@ export const optimizeBuild = () => ({
           reuseExistingChunk: true
         }
       }
-    }
+    },
+    // Выносит runtime каждого entryPoint в отдельный чанк. false по умолчанию
+    runtimeChunk: true
   }
 })
 
