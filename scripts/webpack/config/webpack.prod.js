@@ -13,8 +13,7 @@ export default () => {
   return merge(getCommonConfig(), {
       mode: 'production', // перезаписывает NODE_ENV
       output: {
-        filename: 'js/[name].[contenthash:5].[id].js',
-        chunkFilename: 'js/[name].[chunkhash:5].[id].js',
+        filename: 'js/[name].[chunkhash].[id].js',
       },
       devtool: false,
       plugins: [

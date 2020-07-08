@@ -15,7 +15,9 @@ export default () => {
       entry: [SOURCE_DIRECTORY],
       output: {
         path: BUILD_DIRECTORY,
-        publicPath: '/'
+        publicPath: '/',
+        chunkFilename: 'js/[name].[chunkhash].[id].js',
+        hashDigestLength: 5
       },
       plugins: [
         new DefinePlugin({
